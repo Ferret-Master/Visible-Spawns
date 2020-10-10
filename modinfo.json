@@ -1,0 +1,37 @@
+{
+    "context": "server",
+    "identifier": "com.pa.ferretmaster.visible-spawns",
+    "display_name": "Visible spawns",
+    "description": "displays teamates chosen landing spot",
+    "author": "Ferretmaster",
+    "version": "1.0",
+    "build": "114880",
+    "date": "2020-10-10",
+    "signature": "not yet implemented",
+    
+    "priority": 100,
+    
+    "scenes": {
+		"live_game": [
+            
+            "coui://ui/mods/landingPos/landing.js",
+            "coui://ui/mods/landingPos/puppet_framework.js"
+            
+        ],
+        "live_game_chat": [
+            "coui://ui/mods/landingPos/new.js",
+            "coui://ui/mods/landingPos/main.js",
+            "coui://ui/mods/landingPos/handlers.js"
+            
+        ]
+        
+    },
+    "category": [
+        "ui","titans", "in-game","server"
+        
+    ],
+   
+    "icon": ""
+   
+   
+}
