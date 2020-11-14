@@ -2,12 +2,13 @@
     "context": "server",
     "identifier": "com.pa.ferretmaster.visible-spawns",
     "display_name": "Visible spawns",
-    "description": "displays teamates chosen landing spot",
+    "description": "displays teammates chosen landing spot",
     "author": "Ferretmaster",
     "version": "1.0",
     "build": "114880",
     "date": "2020-10-10",
     "signature": "not yet implemented",
+    "forum": "https://forums.planetaryannihilation.com/threads/rel-server-visible-spawns.73513/",
     
     "priority": 100,
     
