@@ -25,10 +25,10 @@
     ],
     "model": 
       {
-        "filename": "/pa/units/land/allied_spawn/allied_spawn.papa",
+        "filename": "/pa/puppets/allied_spawn/allied_spawn.papa",
         "animations": {
             
-            "idle": "/pa/units/land/allied_spawn/allied_spawn_idle.papa"
+            "idle": "/pa/puppets/allied_spawn/allied_spawn_idle.papa"
             
           }
       }
