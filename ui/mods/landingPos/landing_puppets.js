@@ -1,20 +1,34 @@
 function createSpawnPuppet(puppetName, location,animation,effectsType,color){ //takes in name of unit in file, and contextual info then generates the rest of create puppet
 		color.push(0.98)
-		puppetName+=".json";
+	
+		var chosenUnit;
+		var config = [{}];
+		
+		if(effectsType == "AlliedSpawn" || effectsType == "PlayerSpawnZone"){
+			chosenUnit = "/pa/puppets/"+puppetName+"/"+puppetName+".json";
+		}
+		else{
+
+			puppetName+=".json";
 		var chosenUnit;
 		var config = [{}];
 		unitKeys = _.keys(model.unitSpecs);
 		
-	
+		//console.log(unitKeys.length)
 		for(var i = 0;i<unitKeys.length;i++){
 			
-		
+			//console.log(unitKeys[i])
 			if(unitKeys[i].endsWith(puppetName)){
-			
+				//console.log(_.keys(model.unitSpecs[unitKeys[i]]))
 				chosenUnit = unitKeys[i];
-				
+				console.log(chosenUnit)
 			}
 		}
+		}
+		
+		
+
+
 		$.getJSON("coui://"+chosenUnit).then(function(data){
 			
 			
@@ -47,7 +61,7 @@ function createSpawnPuppet(puppetName, location,animation,effectsType,color){ //
 				
 				{
 					"type": "idle",
-					"filename": "/pa/units/land/allied_spawn/allied_spawn.pfx",
+					"filename": "/pa/puppets/allied_spawn/allied_spawn.pfx",
 					"bone": "boneroot",
 				  "offset": [
 					0,
@@ -66,7 +80,7 @@ function createSpawnPuppet(puppetName, location,animation,effectsType,color){ //
 				
 			{
 				"type": "idle",
-				"filename": "/pa/units/land/player_spawn/player_spawn.pfx",
+				"filename": "/pa/puppets/player_spawn/player_spawn.pfx",
 				"bone": "boneroot",
 			  "offset": [
 				0,
@@ -215,7 +229,7 @@ function createSpawnPuppet(puppetName, location,animation,effectsType,color){ //
 	createSpawnPuppet(model_name,zoneCenter,"idle",effectName,color);
 	}
 
-	engine.call('execute', 'landing_zones', JSON.stringify({ landing_zones: allZones}));
+	//engine.call('execute', 'landing_zones', JSON.stringify({ landing_zones: allZones}));
 
 		
 
